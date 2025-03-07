@@ -1,10 +1,10 @@
-# zsh-ssh
+# sshrc-zsh-plugin
 
-Better host completion for ssh in Zsh.
+Better host completion for **sshrc** in Zsh.
 
 [![asciicast](https://asciinema.org/a/381405.svg)](https://asciinema.org/a/381405)
 
-- [zsh-ssh](#zsh-ssh)
+- [sshrc-zsh-plugin](#sshrc-zsh-plugin)
     - [Installation](#installation)
         - [Zinit](#zinit)
         - [Antigen](#antigen)
@@ -21,13 +21,13 @@ Make sure you have [fzf](https://github.com/junegunn/fzf) installed.
 ### Zinit
 
 ```shell
-zinit light sunlei/zsh-ssh
+zinit light habanerospices/sshrc-zsh-plugin
 ```
 
 ### Antigen
 
 ```shell
-antigen bundle sunlei/zsh-ssh
+antigen bundle habanerospices/sshrc-zsh-plugin
 ```
 
 ### Oh My Zsh
@@ -35,13 +35,13 @@ antigen bundle sunlei/zsh-ssh
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
     ```shell
-    git clone https://github.com/sunlei/zsh-ssh ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-ssh
+    git clone https://github.com/habanerospices/sshrc-zsh-plugin ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/sshrc
     ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
 
     ```shell
-    plugins=(zsh-ssh $plugins)
+    plugins=(sshrc ...)
     ```
 
 3. Start a new terminal session.
@@ -51,8 +51,8 @@ antigen bundle sunlei/zsh-ssh
 1. Add this config to `~/.config/sheldon/plugins.toml`
 
     ```toml
-    [plugins.zsh-ssh]
-    github = 'sunlei/zsh-ssh'
+    [plugins.sshrc]
+    github = 'habanerospices/sshrc-zsh-plugin'
     ```
 
 2. Run `sheldon lock` to install the plugin.
@@ -61,23 +61,23 @@ antigen bundle sunlei/zsh-ssh
 
 ### Manual (Git Clone)
 
-1. Clone this repository somewhere on your machine. For example: `~/.zsh/zsh-ssh`.
+1. Clone this repository somewhere on your machine. For example: `~/.zsh/sshrc`.
 
     ```shell
-    git clone https://github.com/sunlei/zsh-ssh ~/.zsh/zsh-ssh
+    git clone https://github.com/habanerospices/sshrc-zsh-plugin ~/.zsh/sshrc
     ```
 
 2. Add the following to your `.zshrc`:
 
     ```shell
-    source ~/.zsh/zsh-ssh/zsh-ssh.zsh
+    source ~/.zsh/sshrc/sshrc.zsh
     ```
 
 3. Start a new terminal session.
 
 ## Usage
 
-Just press <kbd>Tab</kbd> after `ssh` command as usual.
+Just press <kbd>Tab</kbd> after `sshrc` command as usual.
 
 ### SSH Config Example
 
