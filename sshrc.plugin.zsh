@@ -1,1 +1,0 @@
-sshrc.zsh

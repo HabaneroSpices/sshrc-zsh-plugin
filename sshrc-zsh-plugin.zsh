@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# Better completion for ssh in Zsh.
-# https://github.com/sunlei/zsh-ssh
+# Better completion for sshrc in Zsh.
+# https://github.com/habanerospices/sshrc-zsh-plugin
 # v0.0.7
 # Copyright (c) 2020 Sunlei <guizaicn@gmail.com>
 
@@ -162,7 +162,7 @@ _fzf_list_generator() {
 
   header="
 Alias|->|Hostname|User|Desc
-ΓöÇΓöÇΓöÇΓöÇΓöÇ|ΓöÇΓöÇ|ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ|ΓöÇΓöÇΓöÇΓöÇ|ΓöÇΓöÇΓöÇΓöÇ
+─────|──|────────|────|────
 "
 
   host_list="${header}\n${host_list}"
@@ -222,7 +222,7 @@ fzf_complete_ssh() {
       --query=$fuzzy_input \
       --no-separator \
       --bind 'shift-tab:up,tab:down,bspace:backward-delete-char/eof' \
-      --preview 'ssh -T -G $(cut -f 1 -d " " <<< {}) | grep -i -E "^User |^HostName |^Port |^ControlMaster |^ForwardAgent |^LocalForward |^IdentityFile |^RemoteForward |^ProxyCommand |^ProxyJump " | column -t' \
+      --preview 'sshrc -T -G $(cut -f 1 -d " " <<< {}) | grep -i -E "^User |^HostName |^Port |^ControlMaster |^ForwardAgent |^LocalForward |^IdentityFile |^RemoteForward |^ProxyCommand |^ProxyJump " | column -t' \
       --preview-window=right:40%
     )
 
