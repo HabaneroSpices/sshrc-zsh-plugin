@@ -162,7 +162,7 @@ _fzf_list_generator() {
 
   header="
 Alias|->|Hostname|User|Desc
-─────|──|────────|────|────
+ΓöÇΓöÇΓöÇΓöÇΓöÇ|ΓöÇΓöÇ|ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ|ΓöÇΓöÇΓöÇΓöÇ|ΓöÇΓöÇΓöÇΓöÇ
 "
 
   host_list="${header}\n${host_list}"
@@ -180,7 +180,7 @@ _set_lbuffer() {
   fi
 
   selected_host=$(cut -f 1 -d " " <<< ${result})
-  connect_cmd="ssh ${selected_host}"
+  connect_cmd="sshrc ${selected_host}"
 
   LBUFFER="$connect_cmd"
 }
@@ -192,9 +192,9 @@ fzf_complete_ssh() {
   tokens=(${(z)LBUFFER})
   cmd=${tokens[1]}
 
-  if [[ "$LBUFFER" =~ "^ *ssh$" ]]; then
+  if [[ "$LBUFFER" =~ "^ *sshrc$" ]]; then
     zle ${fzf_ssh_default_completion:-expand-or-complete}
-  elif [[ "$cmd" == "ssh" ]]; then
+  elif [[ "$cmd" == "sshrc" ]]; then
     result=$(_ssh_host_list ${tokens[2, -1]})
     fuzzy_input="${LBUFFER#"$tokens[1] "}"
 
