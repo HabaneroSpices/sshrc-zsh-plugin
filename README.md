@@ -35,13 +35,13 @@ antigen bundle habanerospices/sshrc-zsh-plugin
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
     ```shell
-    git clone https://github.com/habanerospices/sshrc-zsh-plugin ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/sshrc
+    git clone https://github.com/habanerospices/sshrc-zsh-plugin ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/sshrc-zsh-plugin
     ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
 
     ```shell
-    plugins=(sshrc ...)
+    plugins=(sshrc-zsh-plugin ...)
     ```
 
 3. Start a new terminal session.
@@ -51,7 +51,7 @@ antigen bundle habanerospices/sshrc-zsh-plugin
 1. Add this config to `~/.config/sheldon/plugins.toml`
 
     ```toml
-    [plugins.sshrc]
+    [plugins.sshrc-zsh-plugin]
     github = 'habanerospices/sshrc-zsh-plugin'
     ```
 
@@ -61,16 +61,16 @@ antigen bundle habanerospices/sshrc-zsh-plugin
 
 ### Manual (Git Clone)
 
-1. Clone this repository somewhere on your machine. For example: `~/.zsh/sshrc`.
+1. Clone this repository somewhere on your machine. For example: `~/.zsh/sshrc-zsh-plugin`.
 
     ```shell
-    git clone https://github.com/habanerospices/sshrc-zsh-plugin ~/.zsh/sshrc
+    git clone https://github.com/habanerospices/sshrc-zsh-plugin ~/.zsh/sshrc-zsh-plugin
     ```
 
 2. Add the following to your `.zshrc`:
 
     ```shell
-    source ~/.zsh/sshrc/sshrc.zsh
+    source ~/.zsh/sshrc/sshrc-zsh-plugin.zsh
     ```
 
 3. Start a new terminal session.
